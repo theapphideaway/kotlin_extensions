@@ -1,3 +1,11 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val collections = Collections()
+    //collections.addElements()
+    //collections.containsElement()
+    //collections.emptyCheck()
+    //collections.removeElement()
+    //collections.retainElements()
+    //collections.clearElements()
+    //collections.streamElements()
+    //collections.iterateElements()
 }
