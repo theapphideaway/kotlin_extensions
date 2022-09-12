@@ -8,4 +8,5 @@ fun main(args: Array<String>) {
     //collections.clearElements()
     //collections.streamElements()
     //collections.iterateElements()
+    collections.zipElements()
 }

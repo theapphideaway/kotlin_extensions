@@ -1,3 +1,5 @@
+import java.util.Collections
+
 class Collections {
     //BASIC LISTS
     val samples = arrayListOf("One", "Two", "Three")
@@ -58,6 +60,48 @@ class Collections {
             println(iterator.next())
         }
     }
+
+    //indexOf() - Get an index of an element
+    fun indexOfElement(){
+        println(samples.indexOf("One"))
+    }
+
+    //lastIndexOf - Get the last index of an element
+    fun lastIndexOfElement(){
+        samples.add("One")
+        println(samples.lastIndexOf("One"))
+    }
+
+    //get() - Get an Element
+    fun getElement(){
+        println(samples.get(0))
+        println(samples[0])
+    }
+
+    //sublist - Take a sublist
+    fun sublistElements(){
+        val sublist = samples.subList(0,1)
+        sublist.forEach { println(it) }
+    }
+
+    //set(), replaceAll() - Replace an element or elements
+    fun replaceElement(){
+        samples.set(0, "First Replaced")
+        samples[1] = "Second Replaced"
+        Collections.replaceAll(samples, "Three", "Replaced")
+    }
+
+    //zip() - Create a new list of pairs from two seperate lists
+    fun zipElements(){
+        val sampleInts = arrayListOf(1,2,3)
+        val zipPair = samples zip sampleInts
+        println("As A Pair")
+        zipPair.forEach { println(it) }
+        val map = zipPair.associate { it.first to it.second }
+        println("As A Map: ")
+        map.forEach { (t, u) -> println("$t, $u") }
+    }
+
 
     //MAPS
 }
